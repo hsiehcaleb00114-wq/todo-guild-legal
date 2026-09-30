@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>To-Do Guild 待辦公會 — Privacy & Support</title>
+<link rel="icon" href="icon.png">
+<style>
+  :root {
+    --bg: #221D2C; --surface: #332B3E; --line: #1A1622;
+    --text: #F0E3D0; --dim: #A08B94; --gold: #FBCA97; --gold2: #D7B888;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.75 -apple-system, "PingFang TC", "Noto Sans TC", "Segoe UI", sans-serif;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
+  header { text-align: center; margin-bottom: 24px; }
+  header img { width: 96px; height: 96px; border-radius: 22px; image-rendering: pixelated; }
+  h1 { color: var(--gold); font-size: 28px; margin: 12px 0 4px; }
+  .sub { color: var(--dim); margin: 0; }
+  .langs { display: flex; gap: 8px; justify-content: center; margin: 20px 0 8px; }
+  .langs button {
+    background: var(--surface); color: var(--text); border: 2px solid var(--line);
+    padding: 6px 16px; font: inherit; cursor: pointer; border-radius: 4px;
+  }
+  .langs button[aria-pressed="true"] { background: var(--gold2); color: var(--line); }
+  nav { text-align: center; color: var(--dim); margin-bottom: 24px; }
+  nav a { color: var(--gold); margin: 0 8px; }
+  section {
+    background: var(--surface); border: 2px solid var(--line); border-radius: 6px;
+    padding: 4px 20px 16px; margin: 16px 0;
+  }
+  h2 { color: var(--gold); font-size: 20px; margin: 20px 0 8px; }
+  h3 { color: var(--gold2); font-size: 17px; margin: 18px 0 4px; }
+  p, li { margin: 6px 0; }
+  a { color: var(--gold); }
+  .muted { color: var(--dim); font-size: 14px; }
+  [data-lang] { display: none; }
+  [data-lang].on { display: block; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="icon.png" alt="To-Do Guild icon">
+    <h1>To-Do Guild 待辦公會</h1>
+    <p class="sub">A pixel-art to-do list · 像素風待辦清單</p>
+    <div class="langs" role="group" aria-label="Language">
+      <button type="button" data-set="zh">中文</button>
+      <button type="button" data-set="en">English</button>
+    </div>
+  </header>
+
+  <!-- ============================== 繁體中文 ============================== -->
+  <div data-lang="zh">
+    <nav><a href="#zh-privacy">隱私權政策</a>·<a href="#zh-support">技術支援</a></nav>
+
+    <section id="zh-privacy">
+      <h2>隱私權政策</h2>
+      <p class="muted">生效日期：2026 年 9 月 30 日</p>
+      <p>待辦公會（To-Do Guild，以下稱「本 App」）尊重你的隱私。簡單來說：<strong>本 App 不收集、不上傳、不分享你的任何資料。</strong></p>
+
+      <h3>我們收集哪些資料</h3>
+      <p>沒有。本 App 不需要註冊帳號，不含廣告、數據分析或追蹤工具，也不會連上網路。</p>
+
+      <h3>資料存在哪裡</h3>
+      <p>你建立的委託、專注紀錄、收藏與設定，都只存在你自己的裝置上。我們看不到、也拿不到這些資料。</p>
+      <p>如果你開啟了 iCloud 或電腦的裝置備份，這些資料可能會跟著裝置備份一起保存，這部分由 Apple 依照其隱私權政策處理。</p>
+
+      <h3>匯出存檔代碼</h3>
+      <p>在設定頁可以匯出一組「存檔代碼」，用來在換手機時接回進度。代碼是在你的裝置上產生的，要貼到哪裡由你決定，我們不會收到。代碼裡有你的委託名稱，分享給別人前請留意。</p>
+
+      <h3>權限</h3>
+      <p>本 App 不要求相機、相簿、位置、麥克風、聯絡人或任何其他權限。</p>
+
+      <h3>刪除資料</h3>
+      <p>刪除本 App 就會刪除它在你裝置上的所有資料。因為我們沒有保存任何資料，所以也沒有可以另外申請刪除的內容。</p>
+
+      <h3>兒童</h3>
+      <p>本 App 不收集任何人的資料，包含 13 歲以下的兒童。</p>
+
+      <h3>政策變更</h3>
+      <p>如果本 App 日後加入會處理資料的功能，我們會先更新這一頁並修改生效日期。</p>
+
+      <h3>聯絡我們</h3>
+      <p>對這份政策有任何問題，請到 <a href="https://github.com/hsiehcaleb00114-wq/todo-guild-legal/issues">GitHub Issues</a> 留言。</p>
+    </section>
+
+    <section id="zh-support">
+      <h2>技術支援</h2>
+
+      <h3>換手機時要怎麼帶走進度？</h3>
+      <p>在舊手機打開「設定 → 匯出進度」，複製存檔代碼；到新手機的「設定 → 匯入進度」貼上即可。</p>
+
+      <h3>想再看一次新手教學</h3>
+      <p>「設定 → 再看一次教學」。</p>
+
+      <h3>聲音太大或太小</h3>
+      <p>設定頁有三條音量：音效、討伐、豬人說話，可以分開調整或關掉。</p>
+
+      <h3>回報問題或提出建議</h3>
+      <p>請到 <a href="https://github.com/hsiehcaleb00114-wq/todo-guild-legal/issues">GitHub Issues</a> 開一則新留言，寫下你的手機型號、iOS 版本和發生的狀況。</p>
+    </section>
+  </div>
+
+  <!-- ============================== English ============================== -->
+  <div data-lang="en">
+    <nav><a href="#en-privacy">Privacy Policy</a>·<a href="#en-support">Support</a></nav>
+
+    <section id="en-privacy">
+      <h2>Privacy Policy</h2>
+      <p class="muted">Effective date: September 30, 2026</p>
+      <p>To-Do Guild ("the app") respects your privacy. In short: <strong>the app does not collect, upload or share any of your data.</strong></p>
+
+      <h3>What we collect</h3>
+      <p>Nothing. The app needs no account, contains no ads, analytics or tracking tools, and never connects to the internet.</p>
+
+      <h3>Where your data lives</h3>
+      <p>Your quests, focus history, collection and settings are stored only on your own device. We cannot see or access them.</p>
+      <p>If you use iCloud or computer device backups, this data may be included in those backups, which Apple handles under its own privacy policy.</p>
+
+      <h3>Exported save codes</h3>
+      <p>The Settings page can export a save code so you can move your progress to a new phone. The code is created on your device and you decide where to paste it; we never receive it. It contains your quest names, so take care before sharing it.</p>
+
+      <h3>Permissions</h3>
+      <p>The app does not ask for camera, photos, location, microphone, contacts or any other permission.</p>
+
+      <h3>Deleting your data</h3>
+      <p>Deleting the app deletes all of its data from your device. Since we keep no data, there is nothing else to request deletion of.</p>
+
+      <h3>Children</h3>
+      <p>The app collects no data from anyone, including children under 13.</p>
+
+      <h3>Changes</h3>
+      <p>If a future version adds anything that handles data, we will update this page and its effective date first.</p>
+
+      <h3>Contact</h3>
+      <p>Questions about this policy? Please open an issue on <a href="https://github.com/hsiehcaleb00114-wq/todo-guild-legal/issues">GitHub Issues</a>.</p>
+    </section>
+
+    <section id="en-support">
+      <h2>Support</h2>
+
+      <h3>How do I move my progress to a new phone?</h3>
+      <p>On the old phone, open Settings → Export and copy the save code. On the new phone, paste it in Settings → Import.</p>
+
+      <h3>I want to see the tutorial again</h3>
+      <p>Settings → Replay tutorial.</p>
+
+      <h3>The sound is too loud or too quiet</h3>
+      <p>Settings has three volume sliders: Effects, Battle and Pig voices. Adjust or mute each one.</p>
+
+      <h3>Report a problem or suggest a feature</h3>
+      <p>Open a new issue on <a href="https://github.com/hsiehcaleb00114-wq/todo-guild-legal/issues">GitHub Issues</a> with your phone model, iOS version and what happened.</p>
+    </section>
+  </div>
+
+  <p class="muted" style="text-align:center">© 2026 To-Do Guild</p>
+</main>
+<script>
+  // 預設跟著瀏覽器語言；按過就記住（隱私模式下存不了也沒關係）
+  function use(lang) {
+    document.querySelectorAll('[data-lang]').forEach(el => el.classList.toggle('on', el.dataset.lang === lang));
+    document.querySelectorAll('[data-set]').forEach(b => b.setAttribute('aria-pressed', b.dataset.set === lang));
+    document.documentElement.lang = lang === 'zh' ? 'zh-Hant' : 'en';
+  }
+  let saved = null;
+  try { saved = localStorage.getItem('lang'); } catch (e) {}
+  const hash = location.hash.slice(1, 3);
+  use(hash === 'zh' || hash === 'en' ? hash : saved || (navigator.language.startsWith('zh') ? 'zh' : 'en'));
+  document.querySelectorAll('[data-set]').forEach(b => b.addEventListener('click', () => {
+    use(b.dataset.set);
+    try { localStorage.setItem('lang', b.dataset.set); } catch (e) {}
+  }));
+</script>
+</body>
+</html>
