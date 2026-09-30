@@ -170,6 +170,8 @@
   try { saved = localStorage.getItem('lang'); } catch (e) {}
   const hash = location.hash.slice(1, 3);
   use(hash === 'zh' || hash === 'en' ? hash : saved || (navigator.language.startsWith('zh') ? 'zh' : 'en'));
+  // 語言切好之後那一段才看得見，這時候才捲得過去
+  if (location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView();
   document.querySelectorAll('[data-set]').forEach(b => b.addEventListener('click', () => {
     use(b.dataset.set);
     try { localStorage.setItem('lang', b.dataset.set); } catch (e) {}
